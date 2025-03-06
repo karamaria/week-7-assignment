@@ -18,6 +18,10 @@ pool.connect()
 app.use(cors());
 app.use(express.json());
 
+app.get("/", function (req, res) {
+  res.json("This is my root!");
+});
+
 app.get("/api/recipes", async (req, res) => {
   try {
     const result = await pool.query("SELECT * FROM recipes");
@@ -95,7 +99,7 @@ app.post("/api/recipes/:id/like", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(3000, function () {
+  console.log("App is running on PORT 3000");
 });
  
