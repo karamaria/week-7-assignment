@@ -7,4 +7,5 @@ export default function NavBar() {
       <Link to="/recipes">Recipes</Link>
     </nav>
   );
-}
+} 
+
