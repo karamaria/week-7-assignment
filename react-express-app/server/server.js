@@ -98,3 +98,4 @@ app.post("/api/recipes/:id/like", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+ 
