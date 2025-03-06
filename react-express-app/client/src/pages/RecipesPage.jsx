@@ -6,14 +6,14 @@ const RecipesPage = () => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/recipes')
+    fetch('https://week-7-assignment-7g3z.onrender.com/api/recipes')
       .then((response) => response.json())
       .then((data) => setRecipes(data))
       .catch((error) => console.error('Error fetching recipes:', error));
   }, []);
 
   const handleLike = (id) => {
-    fetch(`http://localhost:5000/api/recipes/${id}/like`, {
+    fetch(`https://week-7-assignment-7g3z.onrender.com/api/recipes/${id}/like`, {
       method: 'POST',
     })
       .then((response) => response.json())
@@ -29,7 +29,7 @@ const RecipesPage = () => {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/api/recipes/${id}`, {
+    fetch(`https://week-7-assignment-7g3z.onrender.com/api/recipes/${id}`, {
       method: 'DELETE',
     })
       .then((response) => response.json())

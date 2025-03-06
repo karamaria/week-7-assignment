@@ -6,7 +6,7 @@ const RecipePage = () => {
   const [recipe, setRecipe] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/recipes/${id}`)
+    fetch(`https://week-7-assignment-7g3z.onrender.com/api/recipes/${id}`)
       .then((response) => response.json())
       .then((data) => setRecipe(data))
       .catch((error) => console.error('Error fetching recipe details:', error));
