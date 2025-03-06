@@ -21,7 +21,7 @@ const RecipeForm = () => {
       const response = await fetch('http://localhost:5000/api/recipes', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json', // Убедись, что заголовок установлен
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(newRecipe),
       });
